@@ -4,5 +4,7 @@ If you have a nested AVRO schema and you want to test it against your data, this
 
 ## How to use
 
-1. Clone this repository
+To use this, you must have Go installed on your machine.
+
+1. Clone this repository or [download the code](https://github.com/mostafa/nested-avro-schema/archive/refs/heads/main.zip).
 2. Run it using `go run main.go <schema-file> <data-file>` command. An example nested AVRO schema and data file is provided in the `example` directory.
