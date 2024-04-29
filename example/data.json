@@ -1,0 +1,86 @@
+{
+  "payload": {
+    "id": {
+      "string": "1234567890"
+    },
+    "smtpConfigName": {
+      "string": "Config 1"
+    },
+    "emailAddressFrom": {
+      "emailAddress": {
+        "string": "nameapp@mail.test.com"
+      },
+      "alias": {
+        "string": "nameapp"
+      }
+    },
+    "emailAddressTo": [
+      {
+        "emailAddress": {
+          "string": "dest1@test.com"
+        },
+        "alias": {
+          "string": "dest 1"
+        }
+      }
+    ],
+    "emailAddressCc": {
+      "array": [
+        {
+          "emailAddress": {
+            "string": "dest2@test.com"
+          },
+          "alias": {
+            "string": "dest 2"
+          }
+        }
+      ]
+    },
+    "emailAddressBcc": {
+      "array": [
+        {
+          "emailAddress": {
+            "string": "dest3@test.com"
+          },
+          "alias": {
+            "string": "dest 3"
+          }
+        }
+      ]
+    },
+    "subject": {
+      "string": "test info"
+    },
+    "body": {
+      "string": "test info body"
+    },
+    "isHtmlBody": {
+      "boolean": true
+    },
+    "emailAddressReplyTo": {
+      "internalservices.itoperation.emailmessage.EmailAddressBasicInfo": {
+        "emailAddress": {
+          "string": "app-nameapp@test.com"
+        },
+        "alias": {
+          "string": "App name App"
+        }
+      }
+    },
+    "attachments": {
+      "array": [
+        {
+          "name": {
+            "string": "attachmentfile.png"
+          },
+          "attachment": {
+            "string": "http://www.test.com"
+          }
+        }
+      ]
+    },
+    "priority": {
+      "int": 0
+    }
+  }
+}

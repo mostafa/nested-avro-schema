@@ -1,0 +1,173 @@
+{
+  "type": "record",
+  "name": "EmailMessageEventRestrictedInValue",
+  "namespace": "internalservices.itoperation.emailmessage",
+  "fields": [
+    {
+      "name": "payload",
+      "type": {
+        "type": "record",
+        "name": "EmailMessage",
+        "fields": [
+          {
+            "name": "id",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "smtpConfigName",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "emailAddressFrom",
+            "type": {
+              "type": "record",
+              "name": "EmailAddressBasicInfo",
+              "fields": [
+                {
+                  "name": "emailAddress",
+                  "type": [
+                    "null",
+                    {
+                      "type": "string",
+                      "avro.java.string": "String"
+                    }
+                  ],
+                  "default": null
+                },
+                {
+                  "name": "alias",
+                  "type": [
+                    "null",
+                    {
+                      "type": "string",
+                      "avro.java.string": "String"
+                    }
+                  ],
+                  "default": null
+                }
+              ]
+            }
+          },
+          {
+            "name": "emailAddressTo",
+            "type": {
+              "type": "array",
+              "items": "EmailAddressBasicInfo"
+            }
+          },
+          {
+            "name": "emailAddressCc",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "EmailAddressBasicInfo"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "emailAddressBcc",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": "EmailAddressBasicInfo"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "subject",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "body",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "isHtmlBody",
+            "type": ["null", "boolean"],
+            "default": null
+          },
+          {
+            "name": "emailAddressReplyTo",
+            "type": ["null", "EmailAddressBasicInfo"],
+            "default": null
+          },
+          {
+            "name": "attachments",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": {
+                  "type": "record",
+                  "name": "EmailMessageAttachment",
+                  "fields": [
+                    {
+                      "name": "name",
+                      "type": [
+                        "null",
+                        {
+                          "type": "string",
+                          "avro.java.string": "String"
+                        }
+                      ],
+                      "default": null
+                    },
+                    {
+                      "name": "attachment",
+                      "type": [
+                        "null",
+                        {
+                          "type": "string",
+                          "avro.java.string": "String"
+                        }
+                      ],
+                      "default": null
+                    }
+                  ]
+                }
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "priority",
+            "type": ["null", "int"],
+            "default": null
+          }
+        ]
+      }
+    }
+  ]
+}
